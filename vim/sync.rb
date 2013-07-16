@@ -1,19 +1,19 @@
-class VimSync < Struct.new(:this_dir)
+class VimSync < Struct.new(:otc_dir)
+
+  def dir
+    otc_dir + 'vim'
+  end
 
   def sync
-    vimrc = File.expand_path("~/.vimrc")
-    puts 'Removing old .vimrc'
-    FileUtils.rm_f vimrc
+    replace_with_symlink "~/.vimrc", (dir + '.vimrc')
 
-    puts 'Symlinking tracked .vimrc'
-    File.symlink (this_dir + 'vim' + '.vimrc').to_s, vimrc.to_s
+    ensure_directory(File.expand_path("~/.vim"))
 
-    bundle = Pathname(File.expand_path("~/.vim/bundle"))
-    puts 'Removing old vim bundles'
-    FileUtils.rm_rf bundle.to_s
+    auto_load = File.expand_path("~/.vim/autoload")
+    replace_with_symlink auto_load, (dir + 'autoload')
 
-    puts 'Symlinking tracked vim bundles'
-    File.symlink (this_dir + 'vim' + 'bundle').to_s, bundle
+    bundle = File.expand_path("~/.vim/bundle")
+    replace_with_symlink bundle, (dir + 'bundle')
   end
 
 end

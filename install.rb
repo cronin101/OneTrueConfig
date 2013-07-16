@@ -2,7 +2,10 @@
 
 require 'pathname'
 require 'fileutils'
+
 require './vim/sync.rb'
+
+require './sync_sugar.rb'
 
 class OneTrueConfig
 
@@ -12,6 +15,7 @@ class OneTrueConfig
 
   def self.sync_all
     synchers.each do |klass|
+      klass.send(:include, SyncSugar)
       klass.new(this_dir).sync
     end
   end
