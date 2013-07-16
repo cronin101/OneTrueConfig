@@ -3,5 +3,5 @@ OneTrueConfig
 
 Managing configurations between machines.
 
-####Current Functionality:
+#####Current Functionality
 * Vim
