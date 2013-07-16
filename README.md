@@ -7,3 +7,4 @@ Managing configurations between machines.
 
 #####Current Functionality
 * Vim
+* Xmonad

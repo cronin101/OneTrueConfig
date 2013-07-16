@@ -4,17 +4,16 @@ require 'pathname'
 require 'fileutils'
 
 require './vim/sync.rb'
+require './xmonad/sync.rb'
 
 require './sync_sugar.rb'
 
 class OneTrueConfig
 
-  def self.synchers
-    [VimSync]
-  end
+  SYNCHERS = [VimSync, XmonadSync]
 
   def self.sync_all
-    synchers.each do |klass|
+    SYNCHERS.each do |klass|
       klass.send(:include, SyncSugar)
       klass.new(this_dir).sync
     end
