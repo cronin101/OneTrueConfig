@@ -1,0 +1,16 @@
+Config { bgColor      = "#1b1e1a"
+             , fgColor      = "#d0dce6"
+             , position = Top 
+             , commands     = [ Run Network "wlan0" ["-L","100","-H","500","-l", "#8AE234", "--normal","orange","--high","#CC0000"] 40
+                              , Run Cpu ["<cpu0>/<cpu1>","-L","20","-H","60","-l","#8AE234","--normal","orange","--high","#CC0000"]   40
+                              , Run Cpu ["<cpu0>","-L","20","-H","60","-l","#8AE234","--normal","orange","--high","#CC0000"]  40
+                              , Run Memory ["-t","Mem: <usedratio>%", "-l", "#8AE234", "--normal","orange","--high","#CC0000"] 40
+			      , Run Battery ["-t","Battery: <left>%","-L","20","-H","80","-l","#CC0000","--normal","orange","--high","#8AE234"] 40
+			      , Run Date "%a %b %_d %H:%M" "date" 60
+                              , Run CpuFreq ["-t","Freq: <cpu0> | <cpu1> GHz","-L","0","-H","2","-l","#8AE234","-n","orange","-h","#CC0000"] 50
+                              , Run StdinReader
+                              ]
+             , sepChar      = "%"
+             , alignSep     = "}{"
+	     , template = "  %StdinReader% }{ %cpu% <fc=#999999>|</fc>  %memory% <fc=#999999>|</fc> %wlan0% <fc=#999999>|</fc> %battery% <fc=#999999>|</fc> %date%             "
+             }
