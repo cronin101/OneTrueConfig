@@ -5,15 +5,13 @@ class VimSync < Struct.new(:otc_dir)
   end
 
   def sync
-    replace_with_symlink "~/.vimrc", (dir + '.vimrc')
+    replace_with_symlink '~/.vimrc', (dir + '.vimrc')
 
-    ensure_directory(File.expand_path("~/.vim"))
+    ensure_directory('~/.vim')
 
-    auto_load = File.expand_path("~/.vim/autoload")
-    replace_with_symlink auto_load, (dir + 'autoload')
+    replace_with_symlink '~/.vim/autoload', (dir + 'autoload')
 
-    bundle = File.expand_path("~/.vim/bundle")
-    replace_with_symlink bundle, (dir + 'bundle')
+    replace_with_symlink '~/.vim/bundle', (dir + 'bundle')
   end
 
 end

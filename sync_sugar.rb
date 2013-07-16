@@ -3,8 +3,9 @@ require 'colored'
 module SyncSugar
 
   def ensure_directory(dependency)
-    unless File.exists?(dependency.to_s)
-      Dir.mkdir(dependency.to_s)
+    dependency_path = File.expand_path dependency
+    unless File.exists?(dependency_path)
+      Dir.mkdir(dependency_path)
     end
   end
 
