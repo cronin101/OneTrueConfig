@@ -145,5 +145,10 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+" Ctrl J for snippet completion
+let g:BASH_Ctrl_j = 'off'
+imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
+
 " Automatically leave insert mode after 'updatetime' (4s by default)
 au CursorHoldI * stopinsert
