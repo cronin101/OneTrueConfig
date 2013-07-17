@@ -1,12 +1,10 @@
-#!/usr/bin/env ruby
-
 require 'pathname'
 require 'fileutils'
 
 require './vim/sync.rb'
 require './xmonad/sync.rb'
 
-require './sync_sugar.rb'
+require './lib/sync_sugar.rb'
 
 class OneTrueConfig
 
@@ -30,4 +28,3 @@ class OneTrueConfig
 
 end
 
-OneTrueConfig::sync_all
