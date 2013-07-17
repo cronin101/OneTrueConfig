@@ -13,6 +13,9 @@ class OneTrueConfig
   SYNCHERS = [VimSync, XmonadSync]
 
   def self.sync_all
+  puts 'Updating submodules'.green
+  `git submodule foreach git pull origin master`
+
     SYNCHERS.each do |klass|
       klass.send(:include, SyncSugar)
       klass.new(this_dir).sync
@@ -27,6 +30,4 @@ class OneTrueConfig
 
 end
 
-puts 'Updating submodules'.green
-`git submodule foreach git pull origin master`
 OneTrueConfig::sync_all
