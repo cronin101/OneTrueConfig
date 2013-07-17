@@ -10,8 +10,8 @@ class VimSync < Struct.new(:otc_dir)
     ensure_directory('~/.vim')
 
     replace_with_symlink '~/.vim/autoload', (dir + 'autoload')
-
     replace_with_symlink '~/.vim/bundle', (dir + 'bundle')
+    replace_with_symlink '~/.vim/snippets', (dir + 'snippets')
   end
 
 end
