@@ -27,4 +27,6 @@ class OneTrueConfig
 
 end
 
+puts 'Updating submodules'.green
+`git submodule foreach git pull origin master`
 OneTrueConfig::sync_all
