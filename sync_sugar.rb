@@ -4,9 +4,8 @@ module SyncSugar
 
   def ensure_directory(dependency)
     dependency_path = File.expand_path dependency
-    unless File.exists?(dependency_path)
-      Dir.mkdir(dependency_path)
-    end
+    
+    Dir.mkdir dependency_path unless File.exists? dependency_path
   end
 
   def replace_with_symlink(original_file, target)
