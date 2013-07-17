@@ -17,7 +17,7 @@ class OneTrueConfig
   `git submodule foreach git pull origin master`
 
     SYNCHERS.each do |klass|
-      klass.send(:include, SyncSugar)
+      klass.send :include, SyncSugar # Sprinkle on some sugar!
       klass.new(this_dir).sync
     end
   end
@@ -25,7 +25,7 @@ class OneTrueConfig
   private
 
   def self.this_dir
-    Pathname(Dir.pwd)
+    Pathname Dir.pwd
   end
 
 end
