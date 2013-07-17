@@ -61,10 +61,14 @@ let g:EasyMotion_leader_key = "'"
 " Always show current position.
 set ruler
 
-set cmdheight=2
+" No screen redrawing during macros
+set lazyredraw
+
+set cmdheight=1
 set showmode
 set showcmd
-set lazyredraw
+set shortmess=atI
+
 
 " Search settings
 set magic
