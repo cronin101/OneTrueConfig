@@ -9,7 +9,7 @@ module SyncSugar
 
   def replace_with_symlink(original_file, target)
     original_file_path = File.expand_path original_file
-    target_path = File.expand_path target
+    target_path = target.to_s
 
     puts "#{self.class}: Removing #{original_file_path}".yellow
     FileUtils.rm_rf original_file_path
