@@ -49,3 +49,6 @@
 [submodule "vim/bundle/tlib"]
 	path = vim/bundle/tlib
 	url = https://github.com/tomtom/tlib_vim.git
+[submodule "vim/bundle/rails"]
+	path = vim/bundle/rails
+	url = https://github.com/tpope/vim-rails
