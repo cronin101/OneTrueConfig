@@ -159,8 +159,8 @@ smap <C-J> <Plug>snipMateNextOrTrigger
   au CursorHoldI * stopinsert
 
   " Disable h,j,k,l keys by default.
-  autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+  "autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
-  " Allow weakness, re-enabling arrow keys with \h.
+  " Toggle hardmode
   nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
