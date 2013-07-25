@@ -1,14 +1,13 @@
 require 'pathname'
 require 'fileutils'
 
-require './vim/sync.rb'
-require './xmonad/sync.rb'
-
 require './lib/sync_sugar.rb'
 
 class OneTrueConfig
 
-  SYNCHERS = [VimSync, XmonadSync]
+  CONFIGS = %w{Vim Xmonad Tmux}
+  CONFIGS.each { |config| require "./#{config.downcase}/sync.rb" }
+  SYNCHERS = CONFIGS.map { |name| const_get(name + 'Sync') }
 
   def self.sync_all
   puts 'Updating submodules'.green
