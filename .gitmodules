@@ -52,3 +52,6 @@
 [submodule "vim/bundle/rails"]
 	path = vim/bundle/rails
 	url = https://github.com/tpope/vim-rails
+[submodule "vim/bundle/hardmode"]
+	path = vim/bundle/hardmode
+	url = git://github.com/wikitopian/hardmode.git

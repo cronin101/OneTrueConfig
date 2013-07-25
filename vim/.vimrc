@@ -12,7 +12,7 @@ set background=dark
 colorscheme solarized
 let g:airline_theme='solarized'
 
-" utf8 or die.
+" UTF8 or die.
 set encoding=utf8
 
 " :BundleInstall packages.
@@ -43,7 +43,7 @@ set mouse=n
 set list listchars=tab:⇥⇥,eol:↵
 set ignorecase smartcase
 
-" Tab settings
+" Tab settings.
 set expandtab
 set shiftwidth=2
 set ts=2
@@ -61,59 +61,64 @@ let g:EasyMotion_leader_key = "'"
 " Always show current position.
 set ruler
 
-" No screen redrawing during macros
+" No screen redrawing during macros.
 set lazyredraw
 
+" Command bar prettification.
 set cmdheight=1
 set showmode
 set showcmd
 set shortmess=atI
 
-
-" Search settings
+" Search settings.
 set magic
 set incsearch
 set hlsearch
 set ignorecase
 set smartcase
 
-" No extra files
+" No extra files.
 set noswapfile
 set nobackup
 set nowritebackup
 
-" WiLd menu
+" WiLd menu.
 set wildmenu
 set wildignore=*.o,*~,*.pyc
 
-" Aesthetics
+" Aesthetics.
 set title
 set laststatus=2
 
-" No annoying alerts
+" No annoying alerts.
 set noerrorbells
 set novisualbell
 
+" Turn off auto-indentation when pasting with F5.
 nnoremap <F5> :set invpaste paste?<Enter>
 imap <F5> <C-O><F5>
 set pastetoggle=<F5>
 
 " Filetype detection and indentation.
 filetype plugin indent on
+" OpenCL syntax highlighing enabled.
+au BufNewFile,BufRead *.cl set filetype=opencl
 
 " Use <F11> and <F12> to copy and paste selected line to primary clipboard.
 map <F11> :!xclip -f<CR>
 map <F12> :r !xclip -o<CR>
 
+" Re-map leader key to \.
 let mapleader = "\\"
-let NERDTreeMinimalUI=1
-
-
-map <Leader>n :NERDTreeToggle<CR>
 map <Leader>x :x<CR>
 map <Leader>q :q<CR>
 map <Leader>w :w<CR>
 
+" NERDTree settings.
+let NERDTreeMinimalUI=1
+map <Leader>n :NERDTreeToggle<CR>
+
+" Make trailing whitespace annoyingly highlighted.
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
@@ -121,34 +126,41 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-au BufNewFile,BufRead *.cl set filetype=opencl
-
+" Tagbar for displaying in-file definitions.
 let g:tagbar_usearrows = 1
-
 nnoremap <leader>l :TagbarToggle<CR>
 
-set guioptions=c "hardmode
-
-" F9 for folding stuff
+" F9 for folding stuff.
 inoremap <F9> <C-O>za
 nnoremap <F9> za
 onoremap <F9> <C-C>za
 vnoremap <F9> zf
 
-" disable arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-
-" Ctrl J for snippet completion
+" ^J for snippet completion.
 let g:BASH_Ctrl_j = 'off'
 imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
 
-" Automatically leave insert mode after 'updatetime' (4s by default)
-au CursorHoldI * stopinsert
+" HARD MODE SETTINGS
+  " Minimal GUI.
+  set guioptions=c
+
+  " Disable arrow keys.
+  map <up> <nop>
+  map <down> <nop>
+  map <left> <nop>
+  map <right> <nop>
+  imap <up> <nop>
+  imap <down> <nop>
+  imap <left> <nop>
+  imap <right> <nop>
+
+  " Automatically leave insert mode after 'updatetime' (4s by default).
+  au CursorHoldI * stopinsert
+
+  " Disable h,j,k,l keys by default.
+  autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+
+  " Allow weakness, re-enabling arrow keys with \h.
+  nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+
