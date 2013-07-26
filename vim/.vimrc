@@ -148,7 +148,7 @@ let g:slime_target = "tmux"
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
-" removes the small delay between pressing escape and entering normal mode.
+" Remove the small delay between pressing Esc and entering Normal mode.
 if ! has('gui_running')
   set ttimeoutlen=10
   augroup FastEscape
