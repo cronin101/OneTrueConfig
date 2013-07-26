@@ -12,8 +12,8 @@ source /usr/local/share/chruby/chruby.sh
 chruby 1.9.3-p385-perf
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.oh-my-zsh/custom/exports.sh
-source $HOME/.oh-my-zsh/custom/aliases.sh
-source $HOME/.oh-my-zsh/custom/fns.sh
-source $HOME/.oh-my-zsh/custom/autorun.sh
+source $ZSH/custom/exports.sh
+source $ZSH/custom/aliases.sh
+source $ZSH/custom/fns.sh
+source $ZSH/custom/autorun.sh
 
