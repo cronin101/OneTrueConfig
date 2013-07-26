@@ -144,6 +144,20 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 " Use tmux for Slime.
 let g:slime_target = "tmux"
 
+" Change cursor shape in different modes on tmux iTerm2
+let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+
+" removes the small delay between pressing escape and entering normal mode.
+if ! has('gui_running')
+  set ttimeoutlen=10
+  augroup FastEscape
+    autocmd!
+    au InsertEnter * set timeoutlen=0
+    au InsertLeave * set timeoutlen=1000
+  augroup END
+endif
+
 " HARD MODE SETTINGS
   " Minimal GUI.
   set guioptions=c
