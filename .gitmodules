@@ -61,3 +61,12 @@
 [submodule "vim/bundle/scratch"]
 	path = vim/bundle/scratch
 	url = https://github.com/duff/vim-scratch
+[submodule "vim/bundle/ruby-refactoring"]
+	path = vim/bundle/ruby-refactoring
+	url = https://github.com/ecomba/vim-ruby-refactoring
+[submodule "vim/bundle/matchit"]
+	path = vim/bundle/matchit
+	url = https://github.com/tsaleh/vim-matchit
+[submodule "vim/bundle/surround"]
+	path = vim/bundle/surround
+	url = https://github.com/tpope/vim-surround
