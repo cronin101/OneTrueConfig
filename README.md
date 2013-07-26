@@ -1,5 +1,5 @@
 #OneTrueConfig
-###Managing configurations. Easy. In the cloud.
+###Managing configuration. Easy. In the cloud.
 
 ![It's all in the cloud, man.](http://newblog.intellitrack.net/wp-content/uploads/2011/07/iStock-Cloud-Computing-Small.jpg)
 
