@@ -5,7 +5,7 @@ require './lib/sync_sugar.rb'
 
 class OneTrueConfig
 
-  CONFIGS = %w{Vim Xmonad Tmux}
+  CONFIGS = %w{Vim Xmonad Tmux Zsh}
   CONFIGS.each { |config| require "./#{config.downcase}/sync.rb" }
   SYNCHERS = CONFIGS.map { |name| const_get(name + 'Sync') }
 
