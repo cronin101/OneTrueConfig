@@ -14,3 +14,4 @@
 -------|---
 | Vim | `autoload`, `bundle`, `snippets` and `.vimrc`. |
 | Xmonad | `xmonad.hs` and `.xmobarrc`. |
+| Tmux| `.tmux.conf` |
