@@ -141,6 +141,9 @@ let g:BASH_Ctrl_j = 'off'
 imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
 
+" Use tmux for Slime.
+let g:slime_target = "tmux"
+
 " HARD MODE SETTINGS
   " Minimal GUI.
   set guioptions=c
