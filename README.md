@@ -5,9 +5,9 @@
 
 `curl -s 'https://gist.github.com/cronin101/a7acffa01dc6171fdcc7' | sh`
 
-Wipes away machine-specific configuration for shared applications and clones from the *One True Configuration* repo.
-
-Allows local changes to the repo to be propogated back to other devices by git push/pull.
+* Wipe away machine-specific configuration for shared applications.
+* Clone from the *One True Configuration* repo.
+* Local changes to the configuration repo can be propogated to other devices by git push/pull.
 
 
 | Application |  |
