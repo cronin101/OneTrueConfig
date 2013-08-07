@@ -11,6 +11,7 @@ set t_Co=256
 set background=dark
 colorscheme solarized
 let g:airline_theme='solarized'
+set guifont=Source\ Code\ Pro\ Light:h12
 
 " UTF8 or die.
 set encoding=utf8
@@ -143,10 +144,6 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 
 " Use tmux for Slime.
 let g:slime_target = "tmux"
-
-" Change cursor shape in different modes on tmux iTerm2
-let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 " Remove the small delay between pressing Esc and entering Normal mode.
 if ! has('gui_running')

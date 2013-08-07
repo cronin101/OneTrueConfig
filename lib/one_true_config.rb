@@ -11,6 +11,7 @@ class OneTrueConfig
 
   def self.sync_all
   puts 'Updating submodules'.green
+  `git submodule update --init`
   `git submodule foreach git pull origin master`
 
     SYNCHERS.each do |klass|
