@@ -136,6 +136,10 @@ inoremap <F9> <C-O>za
 nnoremap <F9> za
 onoremap <F9> <C-C>za
 vnoremap <F9> zf
+set foldlevelstart=20
+
+" Use Unicode symbols for certain Haskell operators
+let g:haskell_conceal_wide = 1
 
 " ^J for snippet completion.
 let g:BASH_Ctrl_j = 'off'

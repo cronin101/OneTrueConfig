@@ -79,3 +79,6 @@
 [submodule "vim/bundle/vim2hs"]
 	path = vim/bundle/vim2hs
 	url = https://github.com/dag/vim2hs
+[submodule "vim/bundle/unimpaired"]
+	path = vim/bundle/unimpaired
+	url = https://github.com/tpope/vim-unimpaired
