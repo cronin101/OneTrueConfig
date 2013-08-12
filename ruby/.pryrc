@@ -1,2 +1,5 @@
 require 'colored'
-Pry.config.prompt_name = '⭔ '.red
+require 'bond'
+require 'pry-coolline'
+
+Pry.config.prompt = ->(obj, nest_level, _){ "#{obj} ".bold << "⭔ ".red }
