@@ -7,6 +7,7 @@ ZSH_THEME="robbyrussell"
 COMPLETION_WAITING_DOTS="true"
 
 source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
 
 source $ZSH/custom/exports.sh
 source $ZSH/custom/aliases.sh

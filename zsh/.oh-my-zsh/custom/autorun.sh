@@ -2,5 +2,5 @@
 [[ -z "$TMUX" ]] && exec tmux
 
 # Wisdom from a moose.
-fortune -s | cowsay -f moose
+#fortune -s | cowsay -f moose
 

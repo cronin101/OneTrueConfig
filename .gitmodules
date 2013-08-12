@@ -73,3 +73,6 @@
 [submodule "vim/bundle/matrix"]
 	path = vim/bundle/matrix
 	url = https://github.com/uguu-org/vim-matrix-screensaver
+[submodule "vim/bundle/tabular"]
+	path = vim/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
