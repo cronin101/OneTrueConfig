@@ -1,1 +1,2 @@
-Pry.config.prompt_name = 'λ'
+require 'colored'
+Pry.config.prompt_name = '⭔ '.red
