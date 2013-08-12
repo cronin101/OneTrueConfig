@@ -16,3 +16,6 @@
 | Vim | `autoload`, `bundle`, `snippets` and `.vimrc`. |
 | Xmonad | `xmonad.hs` and `.xmobarrc`. |
 | Zsh | `.zshrc` |
+| GHCI | `.ghci` |
+| Chruby/RBENV | `.ruby-version` |
+| Pry | `.pryrc` |
