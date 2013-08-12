@@ -5,18 +5,18 @@ require './lib/sync_sugar.rb'
 
 class OneTrueConfig
 
-  CONFIGS = %w{Vim Xmonad Tmux Zsh}
+  CONFIGS = %w{Vim Xmonad Tmux Zsh Haskell Ruby}
   CONFIGS.each { |config| require "./#{config.downcase}/sync.rb" }
-  SYNCHERS = CONFIGS.map { |name| const_get(name + 'Sync') }
 
   def self.sync_all
   puts 'Updating submodules'.green
   `git submodule update --init`
   `git submodule foreach git pull origin master`
 
-    SYNCHERS.each do |klass|
+    CONFIGS.each do |config|
+      klass = const_get(config + 'Sync')
       klass.send :include, SyncSugar # Sprinkle on some sugar!
-      klass.new(this_dir).sync
+      klass.new(this_dir + config.downcase).sync
     end
   end
 

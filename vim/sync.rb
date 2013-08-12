@@ -1,8 +1,4 @@
-class VimSync < Struct.new(:otc_dir)
-
-  def dir
-    otc_dir + 'vim'
-  end
+class VimSync < Struct.new(:dir)
 
   def sync
     replace_with_symlink '~/.vimrc', (dir + '.vimrc')

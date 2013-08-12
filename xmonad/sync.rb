@@ -1,8 +1,4 @@
-class XmonadSync < Struct.new(:otc_dir)
-
-  def dir
-    otc_dir + 'xmonad'
-  end
+class XmonadSync < Struct.new(:dir)
 
   def sync
     ensure_directory('~/.xmonad')

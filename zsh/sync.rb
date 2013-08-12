@@ -1,8 +1,4 @@
-class ZshSync < Struct.new(:otc_dir)
-
-  def dir
-    otc_dir + 'zsh'
-  end
+class ZshSync < Struct.new(:dir)
 
   def sync
     replace_with_symlink '~/.zshrc', (dir + '.zshrc')
