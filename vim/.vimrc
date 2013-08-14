@@ -149,6 +149,9 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 " Use tmux for Slime.
 let g:slime_target = "tmux"
 
+" Check syntax of files on open
+let g:syntastic_check_on_open=1
+
 " Remove the small delay between pressing Esc and entering Normal mode.
 if ! has('gui_running')
   set ttimeoutlen=10
