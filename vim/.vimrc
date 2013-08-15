@@ -39,6 +39,8 @@ augroup END
 
 " Mouse usage enabled in normal mode.
 set mouse=n
+" Set xterm2 mouse mode to allow resizing of splits with mouse inside Tmux.
+set ttymouse=xterm2
 
 " Control character highlighting.
 set list listchars=tab:⇥⇥,eol:↵
@@ -138,7 +140,7 @@ onoremap <F9> <C-C>za
 vnoremap <F9> zf
 set foldlevelstart=20
 
-" Use Unicode symbols for certain Haskell operators
+" Use Unicode symbols to replace multi-char Haskell operators.
 let g:haskell_conceal_wide = 1
 
 " ^J for snippet completion.
@@ -151,6 +153,10 @@ let g:slime_target = "tmux"
 
 " Check syntax of files on open
 let g:syntastic_check_on_open=1
+
+" Better :sign interface symbols
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '!'
 
 " Remove the small delay between pressing Esc and entering Normal mode.
 if ! has('gui_running')

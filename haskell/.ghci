@@ -15,3 +15,22 @@ let myColourPrefs = HsColour.defaultColourPrefs { HsColour.conid = [HsColour.For
 let myPrint = putStrLn . HsColour.hscolour (HsColour.TTYg HsColour.XTerm256Compatible) myColourPrefs False False "" False . IPPrint.pshow
 
 :set -interactive-print=myPrint
+
+--GHCi on Acid:
+:m - Prelude
+:m + GOA
+setLambdabotHome "/Users/cronin/.cabal/bin"
+:def bs        lambdabot "botsnack"
+:def pl        lambdabot "pl"
+:def unpl      lambdabot "unpl"
+:def redo      lambdabot "redo"
+:def undo      lambdabot "undo"
+:def index     lambdabot "index"
+:def docs      lambdabot "docs"
+:def instances lambdabot "instances"
+:def hoogle    lambdabot "hoogle"
+:def source    lambdabot "fptools"
+:def where     lambdabot "where"
+:def version   lambdabot "version"
+:def src       lambdabot "src"
+
