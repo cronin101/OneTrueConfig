@@ -1,7 +1,7 @@
 #OneTrueConfig
 ###Managing configuration. Easy. In the cloud.
 
-![It's all in the cloud, man.](http://newblog.intellitrack.net/wp-content/uploads/2011/07/iStock-Cloud-Computing-Small.jpg)
+![VIM, it's what's for dinner.](http://i.imgur.com/A6vKlmK.png)
 
 `curl -s 'https://gist.github.com/cronin101/a7acffa01dc6171fdcc7' | sh`
 
