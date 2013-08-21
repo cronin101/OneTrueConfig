@@ -88,3 +88,6 @@
 [submodule "vim/bundle/lushtags"]
 	path = vim/bundle/lushtags
 	url = https://github.com/bitc/lushtags
+[submodule "vim/bundle/autoclose"]
+	path = vim/bundle/autoclose
+	url = https://github.com/Townk/vim-autoclose
