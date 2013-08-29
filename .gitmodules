@@ -91,3 +91,6 @@
 [submodule "vim/bundle/autoclose"]
 	path = vim/bundle/autoclose
 	url = https://github.com/Townk/vim-autoclose
+[submodule "vim/bundle/jshint"]
+	path = vim/bundle/jshint
+	url = https://github.com/wookiehangover/jshint.vim
