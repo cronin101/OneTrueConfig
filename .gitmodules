@@ -94,3 +94,15 @@
 [submodule "vim/bundle/jshint"]
 	path = vim/bundle/jshint
 	url = https://github.com/wookiehangover/jshint.vim
+[submodule "vim/bundle/rspec"]
+	path = vim/bundle/rspec
+	url = https://github.com/thoughtbot/vim-rspec
+[submodule "vim/bundle/funcoo"]
+	path = vim/bundle/funcoo
+	url = https://github.com/rizzatti/funcoo.vim.git
+[submodule "vim/bundle/dash"]
+	path = vim/bundle/dash
+	url = https://github.com/rizzatti/dash.vim.git
+[submodule "vim/bundle/xmpfilter"]
+	path = vim/bundle/xmpfilter
+	url = https://github.com/t9md/vim-ruby-xmpfilter

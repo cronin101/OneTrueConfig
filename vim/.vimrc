@@ -5,7 +5,7 @@ call pathogen#helptags()
 " Use Vim defaults
 set nocompatible
 
-" Colorscheme settings.
+" Color-scheme settings.
 syntax enable
 set t_Co=256
 set background=dark
@@ -25,6 +25,9 @@ Bundle 'Valloric/YouCompleteMe'
 " Numbered lines.
 set number
 
+" Default to enabling spell-checker
+set spell
+
 " Keep cursor away from edges of screen.
 set so=14
 
@@ -39,6 +42,8 @@ augroup END
 
 " Mouse usage enabled in normal mode.
 set mouse=n
+" Hide the mouse when typing.
+set mousehide
 " Set xterm2 mouse mode to allow resizing of splits with mouse inside Tmux.
 set ttymouse=xterm2
 
@@ -71,9 +76,9 @@ set lazyredraw
 set cmdheight=1
 set showmode
 set showcmd
-set shortmess=atI
+set shortmess=atIfilmnrxoOT
 
-" Search settings.
+" Search setting.
 set magic
 set incsearch
 set hlsearch
@@ -92,6 +97,7 @@ set wildignore=*.o,*~,*.pyc
 " Aesthetics.
 set title
 set laststatus=2
+set viewoptions=folds,options,cursor,unix,slash
 
 " No annoying alerts.
 set noerrorbells
@@ -167,6 +173,17 @@ if ! has('gui_running')
     au InsertLeave * set timeoutlen=1000
   augroup END
 endif
+
+" Rspec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = "Dispatch rspec {spec}"
+
+" Xmpfilter mappings
+map <F8> <Plug>(xmpfilter-mark)
+map <F9> <Plug>(xmpfilter-run)
 
 " HARD MODE SETTINGS
   " Minimal GUI.
