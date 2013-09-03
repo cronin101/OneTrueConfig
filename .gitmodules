@@ -88,9 +88,6 @@
 [submodule "vim/bundle/lushtags"]
 	path = vim/bundle/lushtags
 	url = https://github.com/bitc/lushtags
-[submodule "vim/bundle/autoclose"]
-	path = vim/bundle/autoclose
-	url = https://github.com/Townk/vim-autoclose
 [submodule "vim/bundle/jshint"]
 	path = vim/bundle/jshint
 	url = https://github.com/wookiehangover/jshint.vim
@@ -106,3 +103,6 @@
 [submodule "vim/bundle/xmpfilter"]
 	path = vim/bundle/xmpfilter
 	url = https://github.com/t9md/vim-ruby-xmpfilter
+[submodule "vim/bundle/delimitMate"]
+	path = vim/bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate
