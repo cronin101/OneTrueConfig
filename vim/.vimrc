@@ -164,6 +164,12 @@ let g:syntastic_check_on_open=1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 
+" Syntastic settings
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+
+" Fix backspace
+set backspace=indent,eol,start
+
 " Remove the small delay between pressing Esc and entering Normal mode.
 if ! has('gui_running')
   set ttimeoutlen=10
