@@ -106,3 +106,6 @@
 [submodule "vim/bundle/delimitMate"]
 	path = vim/bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate
+[submodule "vim/bundle/opencl"]
+	path = vim/bundle/opencl
+	url = https://github.com/petRUShka/vim-opencl
