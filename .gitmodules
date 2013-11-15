@@ -109,3 +109,9 @@
 [submodule "vim/bundle/opencl"]
 	path = vim/bundle/opencl
 	url = https://github.com/petRUShka/vim-opencl
+[submodule "vim/bundle/indexer"]
+	path = vim/bundle/indexer
+	url = https://github.com/shemerey/vim-indexer.git
+[submodule "vim/bundle/omnicpp"]
+	path = vim/bundle/omnicpp
+	url = https://github.com/vim-scripts/OmniCppComplete.git
