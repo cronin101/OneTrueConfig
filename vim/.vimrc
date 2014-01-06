@@ -5,6 +5,9 @@ call pathogen#helptags()
 " Use Vim defaults
 set nocompatible
 
+" Set working directory to that of the open file
+autocmd BufEnter * silent! lcd %:p:h
+
 " Color-scheme settings.
 syntax enable
 set t_Co=256
