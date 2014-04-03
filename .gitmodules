@@ -64,9 +64,6 @@
 [submodule "vim/bundle/ruby-refactoring"]
 	path = vim/bundle/ruby-refactoring
 	url = https://github.com/ecomba/vim-ruby-refactoring
-[submodule "vim/bundle/matchit"]
-	path = vim/bundle/matchit
-	url = https://github.com/tsaleh/vim-matchit
 [submodule "vim/bundle/surround"]
 	path = vim/bundle/surround
 	url = https://github.com/tpope/vim-surround
@@ -93,7 +90,7 @@
 	url = https://github.com/wookiehangover/jshint.vim
 [submodule "vim/bundle/rspec"]
 	path = vim/bundle/rspec
-	url = https://github.com/thoughtbot/vim-rspec
+	url = https://github.com/thoughtbot/vim-rspec.git
 [submodule "vim/bundle/funcoo"]
 	path = vim/bundle/funcoo
 	url = https://github.com/rizzatti/funcoo.vim.git
@@ -102,16 +99,19 @@
 	url = https://github.com/rizzatti/dash.vim.git
 [submodule "vim/bundle/xmpfilter"]
 	path = vim/bundle/xmpfilter
-	url = https://github.com/t9md/vim-ruby-xmpfilter
+	url = https://github.com/t9md/vim-ruby-xmpfilter.git
 [submodule "vim/bundle/delimitMate"]
 	path = vim/bundle/delimitMate
-	url = https://github.com/Raimondi/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
 [submodule "vim/bundle/opencl"]
 	path = vim/bundle/opencl
-	url = https://github.com/petRUShka/vim-opencl
+	url = https://github.com/petRUShka/vim-opencl.git
 [submodule "vim/bundle/indexer"]
 	path = vim/bundle/indexer
 	url = https://github.com/shemerey/vim-indexer.git
 [submodule "vim/bundle/omnicpp"]
 	path = vim/bundle/omnicpp
 	url = https://github.com/vim-scripts/OmniCppComplete.git
+[submodule "vim/bundle/multiple-cursors"]
+	path = vim/bundle/multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
