@@ -2,4 +2,4 @@
 
 require './lib/one_true_config.rb'
 
-OneTrueConfig::sync_all
+OneTrueConfig.sync_all
