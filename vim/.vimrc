@@ -24,6 +24,7 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'amdt/vim-niji'
 
 " Numbered lines.
 set number
@@ -113,6 +114,7 @@ set pastetoggle=<F5>
 
 " Filetype detection and indentation.
 filetype plugin indent on
+syntax on
 " OpenCL syntax highlighing enabled.
 au BufNewFile,BufRead *.cl set filetype=opencl
 
@@ -217,3 +219,10 @@ map <F9> <Plug>(xmpfilter-run)
   " Toggle hardmode
   nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
+
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
+"let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
+"let g:clj_paren_rainbow=1           " Rainbow parentheses'!
+
+let vimclojure#WantNailgun = 1

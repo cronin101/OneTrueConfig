@@ -118,3 +118,18 @@
 [submodule "vim/bundle/matchit"]
 	path = vim/bundle/matchit
 	url = https://github.com/tmhedberg/matchit
+[submodule "vim/bundle/vimclojure"]
+	path = vim/bundle/vimclojure
+	url = https://github.com/vim-scripts/VimClojure
+[submodule "vim/bundle/fireplace"]
+	path = vim/bundle/fireplace
+	url = https://github.com/tpope/vim-fireplace
+[submodule "vim/bundle/clojure-static"]
+	path = vim/bundle/clojure-static
+	url = https://github.com/guns/vim-clojure-static
+[submodule "vim/bundle/clojure-highlight"]
+	path = vim/bundle/clojure-highlight
+	url = https://github.com/guns/vim-clojure-highlight
+[submodule "vim/bundle/rainbow-parens"]
+	path = vim/bundle/rainbow-parens
+	url = https://github.com/kien/rainbow_parentheses.vim

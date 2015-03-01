@@ -16,4 +16,3 @@ source $ZSH/custom/autorun.sh
 
 plugins=(git rails ruby osx bundler autojump)
 source $ZSH/oh-my-zsh.sh
-
